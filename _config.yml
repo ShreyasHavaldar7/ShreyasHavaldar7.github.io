@@ -20,7 +20,9 @@ description: Here is the virtual version of me.
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  # About Me: "aboutme"
+  Blog: "blog"
+  CV: "cv/CV_Shreyas_Havaldar.pdf"
 #  Resume: ""
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -39,22 +41,22 @@ avatar: "/img/dp.jpg"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-#navbar-col: "#a8eff0"
+navbar-col: "#c5f8fa"
 navbar-text-col: "#124c61"
 navbar-children-col: "#a8eff0"
-#page-col: "#FFFFFF"
+page-col: "#f0f7f7"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-#footer-col: "#a8eff0"
+footer-col: "#c5f8fa"
 footer-text-col: "#124c61"
 footer-link-col: "#404040"
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-navbar-img: "/img/bg_main.jpeg"
-footer-img: "/img/bg_main.jpeg"
-page-img: "/img/big_bg.svg"
+# navbar-img: "/img/bg_main.jpeg"
+# footer-img: "/img/bg_main.jpeg"
+# page-img: "/img/big_bg.svg"
 
 # --- Footer options --- #
 
@@ -250,6 +252,8 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
+
+paginate_path: "/blog/page:num/"
 
 plugins:
   - jekyll-paginate
