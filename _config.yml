@@ -21,8 +21,8 @@ description: Here is the virtual version of me.
 # List of links in the navigation bar
 navbar-links:
   # About Me: "aboutme"
-  Blog: "blog"
   Curriculum Vitae: "cv/CV_Shreyas_Havaldar.pdf"
+  Blog: "blog"
 #  Resume: ""
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -259,5 +259,3 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
