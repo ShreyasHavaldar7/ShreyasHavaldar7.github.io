@@ -1,5 +1,5 @@
 # --- General options --- #
-
+remote_theme: daattali/beautiful-jekyll@4.0.1
 # Name of website
 title: Shreyas Havaldar
 
