@@ -21,6 +21,7 @@ description: Here is the virtual version of me.
 # List of links in the navigation bar
 navbar-links:
   # About Me: "aboutme"
+  Projects: "https://github.com/ShreyasHavaldar7"
   Curriculum Vitae: "cv/CV_Shreyas_Havaldar.pdf"
   Blog: "blog"
 #  Resume: ""
