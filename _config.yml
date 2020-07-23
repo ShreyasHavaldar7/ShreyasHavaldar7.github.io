@@ -17,6 +17,7 @@ navbar-links:
   Projects: "https://github.com/ShreyasHavaldar7"
   Curriculum Vitae: "cv/CV_Shreyas_Havaldar.pdf"
   Blog: "blog"
+  Recommendations: "books"
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
