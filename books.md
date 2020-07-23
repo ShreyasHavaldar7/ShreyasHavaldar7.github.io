@@ -1,6 +1,9 @@
 ---
-layout: books
-title: Anudit Verma - My Book Recommendations
+layout: page
+title: Hey reader!
+subtitle: Here's something for you to read
+use-site-title: true
+# cover-img: "assets/img/library.jpg"
 ---
 <head>
 
@@ -10,7 +13,7 @@ title: Anudit Verma - My Book Recommendations
 	<script src="js/modernizr.custom.js"></script>
 </head>
 <div class="view">
-	<div class="my__suggestion"><center><h1><br>Books I Would Recommend</h1></center><div>
+	<div class="my__suggestion"><center><h1><br>Give these a try!</h1></center><div>
 		<section class="grid">
 			<div class="product">
 				<div class="product__info">
