@@ -1,48 +1,90 @@
 ---
-layout: books
+layout: page
 title: Hey reader!
+css:
+  - "/assets/css/bootstrap.min.css"
+  - "/assets/css/bootstrap-social.css"
+  - "/assets/css/main.css"
+  - "/assets/css/particle-js-style.css"
+ext-css:
+  - "//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+<!-- googlefonts:
+  - "Lora:400,700,400italic,700italic"
+  - "Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" -->
+js:
+  - "/assets/js/jquery-3.4.1.min.js"
+  - "/assets/js/bootstrap.min.js"
+  - "/assets/js/main.js"
+  - "/assets/js/particles.min.js"
+  - "/books/js/particles-config-book.js"
 ---
-<head>
+<!DOCTYPE html>
+<html lang="{{ page.language | default: site.language | default: 'en' }}">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2020 -->
+  <!-- {% include head.html %} -->
+  <head>
 
 	<link rel="stylesheet" type="text/css" href="css/book_style.css" />
 	<link rel="stylesheet" type="text/css" href="css/books_component.css" />
 		<!-- Modernizr is used for flexbox fallback -->
 	<script src="js/modernizr.custom.js"></script>
-</head>
-<div class="view">
-	<div class="my__suggestion"><center><h1><br>Give these a try!</h1></center></div>
-		<section class="grid">
+	</head>
+
+  <body>
+
+  <div class="mobile-js-hide">
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+  </div>
+
+    <div class="intro-header"></div>
+
+    {% include gtm_body.html %}
+    
+    {% include nav.html %}
+
+	<div class="view">
+		<div class="my__suggestion"><center><h1><br>Give these a try!</h1></center></div>
+			<section class="grid">
+				
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/alchemist.jpg" alt="The Alchemist" />
+						<h3 class="product__title">The Alchemist</h3>
+						<span class="product__author highlight">Paulo Coelho</span>
+						<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/18144590-the-alchemist')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					</div>
+				</div>
 			
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/alchemist.jpg" alt="The Alchemist" />
-					<h3 class="product__title">The Alchemist</h3>
-					<span class="product__author highlight">Paulo Coelho</span>
-					<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/18144590-the-alchemist')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/wmmc.jpg" alt="Who Moved My Cheese?" />
+						<h3 class="product__title">Who Moved My Cheese?</h3>
+						<span class="product__author highlight">Spencer Johnson</span>
+						<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/4894.Who_Moved_My_Cheese_')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					</div>
 				</div>
-			</div>
-		
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/wmmc.jpg" alt="Who Moved My Cheese?" />
-					<h3 class="product__title">Who Moved My Cheese?</h3>
-					<span class="product__author highlight">Spencer Johnson</span>
-					<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/4894.Who_Moved_My_Cheese_')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+	
+				<div class="product">
+					<div class="product__info">
+						<img class="product__image" src="images/haah.jpg" alt="Hyperbole and a half" />
+						<h3 class="product__title">Hyperbole and a half?</h3>
+						<span class="product__author highlight">Allie Brosh</span>
+						<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/17571564-hyperbole-and-a-half')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
+					</div>
 				</div>
-			</div>
+	
+	
+			</section>
+			<center>
+				<h3>Et tu a bookworm? Check out <a href="https://www.goodreads.com/user/show/118954168-shreyas-havaldar"><img src="goodreads_logo.png" /></a></h3>
+			</center>
+	</div>
 
-			<div class="product">
-				<div class="product__info">
-					<img class="product__image" src="images/haah.jpg" alt="Hyperbole and a half" />
-					<h3 class="product__title">Hyperbole and a half?</h3>
-					<span class="product__author highlight">Allie Brosh</span>
-					<button class="action action--button" onclick="window.open('https://www.goodreads.com/book/show/17571564-hyperbole-and-a-half')"><i class="fa fa-comments"></i><span class="action__text">Reviews</span></button>
-				</div>
-			</div>
+    {% include footer.html %}
+  
+    {% include footer-scripts.html %}
+  
+  </body>
+</html>
 
-
-		</section>
-		<center>
-			<h3>Et tu a bookworm? Check out <a href="https://www.goodreads.com/user/show/118954168-shreyas-havaldar"><img src="goodreads_logo.png" /></a></h3>
-		</center>
-</div>
