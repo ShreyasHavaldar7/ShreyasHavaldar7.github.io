@@ -15,20 +15,20 @@ author: Shreyas Havaldar
 # List of links in the navigation bar
 navbar-links:
   Projects: "https://github.com/ShreyasHavaldar7"
-  Curriculum Vitae: "cv/CV_Shreyas_Havaldar.pdf"
+  Curriculum Vitae: "https://drive.google.com/file/d/1MQU94ncaW1A0NxmPXRYUwQ8MqCPkQUV4/view?usp=sharing"
   Blog: "blog"
   Recommendations: "books"
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/dp.jpg"
+# avatar: "/assets/img/dp.jpg"
 # By default, the image is cut into a circle. You can disable this behaviour here.
-round-avatar: true
+# round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+title-img: "/assets/img/dp.jpg"
 
 # --- Background colour/image options --- #
 
