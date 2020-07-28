@@ -13,11 +13,13 @@ author: Shreyas Havaldar
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
+
 navbar-links:
-  Projects: "https://github.com/ShreyasHavaldar7"
-  Curriculum Vitae: "https://drive.google.com/file/d/1MQU94ncaW1A0NxmPXRYUwQ8MqCPkQUV4/view?usp=sharing"
   Blog: "blog"
   Recommendations: "books"
+  Projects: "https://github.com/ShreyasHavaldar7"
+  Curriculum Vitae: "https://drive.google.com/file/d/1MQU94ncaW1A0NxmPXRYUwQ8MqCPkQUV4/view?usp=sharing"
+
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -28,7 +30,8 @@ navbar-links:
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-title-img: /assets/img/me.jpg
+
+title-img: "/assets/img/me.png"
 
 # --- Background colour/image options --- #
 
@@ -174,6 +177,45 @@ defaults:
     values:
       layout: "page"
       show-avatar: true
+
+#Meta data for your Posts
+metadata:
+  _posts:
+    - name: "layout"
+      field:
+        element: "hidden"
+        value: "post"
+    - name: "title"
+      field:
+        element: "text"
+        label: "Post title"
+        placeholder: "Title"
+        alterable: true
+    - name: "subtitle"
+      field:
+        element: "textarea"
+        label: "Subtitle"
+        placeholder: "A description of your post."
+        alterable: true
+    - name: "date"
+      field:
+        element: "text"
+        label: "Date"
+        help: "Enter date of post."
+        placeholder: "yyyy-mm-dd"
+        alterable: true
+    - name: "image"
+      field:
+        element: "text"
+        label: "Image"
+        help: "Add a thumbnail image to your post."
+        placeholder: "Thumbnail"
+        alterable: true
+    - name: "published"
+      field:
+        element: "checkbox"
+        label: "Publish"
+        help: "Check to publish post, uncheck to hide."
 
 # Exclude these files from production site
 exclude:
