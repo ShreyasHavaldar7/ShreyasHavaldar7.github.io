@@ -5,7 +5,7 @@ remote_theme: daattali/beautiful-jekyll@4.0.1
 title: Shreyas Havaldar
 
 # Short description of your site
-description: Here is the virtual version of me.
+description: Here is a virtual abstraction of me.
 
 # Name
 author: Shreyas Havaldar
@@ -31,8 +31,8 @@ round-avatar: true
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
 
-title-img: "{{ site.url }}/assets/img/me.png"
-
+title-img: "https://shreyashavaldar7.github.io/website/assets/img/me.png" 
+# temp fix
 # --- Background colour/image options --- #
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
