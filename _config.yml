@@ -1,6 +1,6 @@
 # --- General options --- #
 # Theme of the website, to stay updated.
-remote_theme: daattali/beautiful-jekyll@4.0.1
+remote_theme: daattali/beautiful-jekyll@4.1.0
 # Name of website
 title: Shreyas Havaldar
 
@@ -10,6 +10,7 @@ description: Here is a virtual abstraction of me.
 # Name
 author: Shreyas Havaldar
 
+keywords: Computer Science, Engineering, Development, Machine Learning, IIT, Hyderabad
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
@@ -17,8 +18,14 @@ author: Shreyas Havaldar
 navbar-links:
   Blog: "blog"
   Recommendations: "books"
-  Projects: "https://github.com/ShreyasHavaldar7"
-  Curriculum Vitae: "https://drive.google.com/file/d/1MQU94ncaW1A0NxmPXRYUwQ8MqCPkQUV4/view?usp=sharing"
+  Project Work: 
+    - Website Source: "https://github.com/ShreyasHavaldar7/website"
+    - Kernel Programming: "https://github.com/ShreyasHavaldar7/devmmap_paging"
+    - Assignments: "https://github.com/ShreyasHavaldar7/SEM_IV"
+  Résumé: "https://drive.google.com/file/d/1MQU94ncaW1A0NxmPXRYUwQ8MqCPkQUV4/view?usp=sharing"
+  Test: "test.html"
+
+
 
 
 
@@ -234,4 +241,3 @@ paginate_path: "/blog/page:num/"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
