@@ -18,7 +18,7 @@ keywords: Computer Science, Engineering, Development, Machine Learning, IIT, Hyd
 
 navbar-links:
 #   Blog: "blog"
-  Recommendations: "books"
+#   Recommendations: "books"
   Project Work: 
     - Website Source: "https://github.com/ShreyasHavaldar7/website"
     - Kernel Programming: "https://github.com/ShreyasHavaldar7/devmmap_paging"
