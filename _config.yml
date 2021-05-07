@@ -17,7 +17,7 @@ keywords: Computer Science, Engineering, Development, Machine Learning, IIT, Hyd
 # List of links in the navigation bar
 
 navbar-links:
-  Blog: "blog"
+#   Blog: "blog"
   Recommendations: "books"
   Project Work: 
     - Website Source: "https://github.com/ShreyasHavaldar7/website"
