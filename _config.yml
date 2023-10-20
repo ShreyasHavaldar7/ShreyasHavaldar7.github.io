@@ -10,7 +10,7 @@ description: Here is a virtual abstraction of me.
 # Name
 author: Shreyas Havaldar
 
-keywords: Computer Science, Engineering, Development, Machine Learning, IIT, Hyderabad
+keywords: Computer Science, Engineering, Development, Machine Learning, IIT, Hyderabad, Google, Google Research, India, PhD, Graduate School, MS
 
 # --- Navigation bar options --- #
 
@@ -63,8 +63,9 @@ footer-link-col: "#404040"
 
 # Change all these values or delete the ones you don't want.
 social-network-links:
-  rss: true
+  # rss: true
   email: "shreyashavaldar@gmail.com"
+  google-scholar: your google scholar
   # facebook: deanattali
   github: ShreyasHavaldar7
   twitter: _toolazyto_
