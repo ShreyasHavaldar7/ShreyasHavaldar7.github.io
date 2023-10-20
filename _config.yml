@@ -67,7 +67,7 @@ social-network-links:
   email: "shreyashavaldar@gmail.com"
   # facebook: deanattali
   github: ShreyasHavaldar7
-  # twitter: daattali
+  twitter: _toolazyto_
   linkedin: shreyas-havaldar-71377b182
   # stackoverflow: "3943160/daattali"
 #  reddit: yourname
@@ -84,14 +84,14 @@ social-network-links:
 # Select which share links to show in posts
 share-links-active:
   twitter: true
-  facebook: true
+  # facebook: true
   linkedin: true
 #  github: true
 #  email: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "https://shreyashavaldar7.github.io/website/"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
