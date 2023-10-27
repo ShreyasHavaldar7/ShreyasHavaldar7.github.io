@@ -33,7 +33,7 @@ navbar-links:
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
 
-title-img: "https://shreyashavaldar7.github.io/website/assets/img/dp-circle.png" 
+title-img: "https://shreyashavaldar7.github.io/assets/img/dp-circle.png" 
 # temp fix
 # --- Background colour/image options --- #
 
@@ -90,7 +90,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://shreyashavaldar7.github.io/website/"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "https://shreyashavaldar7.github.io/"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Create a "tags" index page and make tags on each post clickable
 link-tags: true
@@ -117,7 +117,7 @@ link-tags: true
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "https-shreyashavaldar7-github-io-website"
+disqus: "https-shreyashavaldar7-github-io"
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
