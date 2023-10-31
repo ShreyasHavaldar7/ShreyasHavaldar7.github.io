@@ -5,7 +5,7 @@ remote_theme: daattali/beautiful-jekyll@6.0.1
 title: Shreyas Havaldar
 
 # Short description of your site
-description: Here is a virtual abstraction of me.
+description: Here is a virtual abstraction of me, Shreyas Havaldar.
 
 # Name
 author: Shreyas Havaldar
@@ -100,7 +100,7 @@ link-tags: true
 # gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-# google_analytics: "UA-161728691-1"
+google_analytics: "G-NZPWSD5CM9"
 
 # Google Tag Manager ID
 #gtm: ""
