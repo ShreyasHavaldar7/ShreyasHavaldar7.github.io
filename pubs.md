@@ -28,5 +28,5 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
 
     Mangla P., Singh V., **Havaldar, S.**, & Balasubramanian V., 
    
-   [[Paper]](https://arxiv.org/pdf/2003.06566.pdf) [*AML-CV Workshop*](https://aisecure-workshop.github.io/amlcvpr2021), **(CVPR'21)**, Jun 2021     **Best Paper Award** (Also presented at 2 Workshops on [RobustML](https://sites.google.com/connect.hku.hk/robustml-2021/home) and
+   [[Paper]](https://arxiv.org/pdf/2003.06566.pdf) **Best Paper Award** @ [*AML-CV Workshop*](https://aisecure-workshop.github.io/amlcvpr2021) @ **(CVPR'21)** (Also presented at 2 Workshops on [RobustML](https://sites.google.com/connect.hku.hk/robustml-2021/home) and
    [*Responsible AI*](https://sites.google.com/view/rai-workshop/home) at ICLR'21) 
