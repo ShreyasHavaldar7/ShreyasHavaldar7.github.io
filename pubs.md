@@ -16,7 +16,7 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
    
    **Havaldar, S.**, Chauhan, J., Shanmugam, K., Nandy, J., & Raghuveer, A.
    
-   [[Paper]](https://arxiv.org/abs/2310.07535) (positive reviews at **AAAI '24** (3 WA), **Spotlight** at [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023))
+   [[Paper]](https://arxiv.org/abs/2310.07535) (**AAAI '24** & **Spotlight** at [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023))
 
 3. **Label Differential Privacy via Aggregation**
 
