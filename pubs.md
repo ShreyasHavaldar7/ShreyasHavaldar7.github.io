@@ -10,13 +10,13 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
    
     **Havaldar, S.**, Sharma, N., Sareen, S., Shanmugam, K., & Raghuveer, A.
    
-    [[Paper]](https://arxiv.org/abs/2310.08056) (positive reviews at **ICLR '24**, **Oral** at [Regulatable-ML @ **NeurIPS '23**](https://regulatableml.github.io/))
+    [[Paper]](https://arxiv.org/abs/2310.08056) (Poster @ [**ICLR '24**](https://iclr.cc/), **Oral** @ [Regulatable-ML @ **NeurIPS '23**](https://regulatableml.github.io/))
 
 2. **Improving Fairness-Accuracy tradeoff with few Test Samples under Covariate Shift**
    
    **Havaldar, S.**, Chauhan, J., Shanmugam, K., Nandy, J., & Raghuveer, A.
    
-   [[Paper]](https://arxiv.org/abs/2310.07535) (**AAAI '24** & **Spotlight** at [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023))
+   [[Paper]](https://arxiv.org/abs/2310.07535) (Poster @ [**AAAI '24**](https://aaai.org/aaai-conference/) & **Spotlight** @ [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023))
 
 3. **Label Differential Privacy via Aggregation**
 
