@@ -10,13 +10,13 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
    
     **Havaldar, S.**, Sharma, N., Sareen, S., Shanmugam, K., & Raghuveer, A.
    
-    [[Paper]](https://arxiv.org/abs/2310.08056) (Poster @ [**ICLR '24**](https://iclr.cc/), **Oral** @ [Regulatable-ML @ **NeurIPS '23**](https://regulatableml.github.io/))
+    [[Paper]](https://arxiv.org/abs/2310.08056) ([Poster](https://iclr.cc/virtual/2024/poster/18905) @ [**ICLR '24**](https://iclr.cc/), [**Oral**](https://neurips.cc/virtual/2023/80599) @ [Regulatable-ML @ **NeurIPS '23**](https://regulatableml.github.io/neurips2023/))
 
 2. **Improving Fairness-Accuracy tradeoff with few Test Samples under Covariate Shift**
    
    **Havaldar, S.**, Chauhan, J., Shanmugam, K., Nandy, J., & Raghuveer, A.
    
-   [[Paper]](https://arxiv.org/abs/2310.07535) (Poster @ [**AAAI '24**](https://aaai.org/aaai-conference/) & **Spotlight** @ [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023))
+   [[Paper]](https://arxiv.org/abs/2310.07535) ([Poster](https://underline.io/lecture/93241-fairness-under-covariate-shift-improving-fairness-accuracy-tradeoff-with-few-unlabeled-test-samples) @ [**AAAI '24**](https://aaai.org/aaai-conference/) & [**Spotlight**](https://neurips.cc/virtual/2023/77753) @ [Algorithmic Fairness through the Lens of Time @ **NeurIPS '23**](https://www.afciworkshop.org/aft2023/home))
 
 3. **Label Differential Privacy via Aggregation**
 
