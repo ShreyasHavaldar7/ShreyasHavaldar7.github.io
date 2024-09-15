@@ -4,7 +4,7 @@ permalink: /pubs/
 title: My Publications
 ---
 
-Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citations?user=Q2aGAk8AAAAJ&hl=en) as well.
+Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citations?user=kLk_Ep0AAAAJ&hl=en) as well.
 
 1. **Learning from Label Proportions: Bootstrapping Supervised Learners via Belief Propagation**
    
@@ -22,7 +22,7 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
 
    Brahmbhatt, A., Saket, R., **Havaldar, S.**, Nasery, A., & Raghuveer, A.
    
-   [[Paper]](https://arxiv.org/abs/2310.10092) (ongoing work towards **ICML '24**)
+   [[Paper]](https://arxiv.org/abs/2310.10092) (under submission at **NeurIPS '24**)
 
 4. **On the Benefits of Defining Vicinal Distributions in Latent Space**
 
