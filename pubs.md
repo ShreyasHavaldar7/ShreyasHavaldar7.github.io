@@ -8,7 +8,7 @@ Feel free to refer my [Google Scholar Profile](https://scholar.google.com/citati
 
 1. **Epidemiology of Large Language Models: A Benchmark for Observational Distribution Knowledge**
       
-      Plecko, D., Okanovic, P, **Havaldar, S.**, Hoefler, T. \& Bareinboim, E.
+      Plecko, D., Okanovic, P, **Havaldar, S.**, Hoefler, T. & Bareinboim, E.
 
       [[Paper]](https://arxiv.org/abs/2511.03070) (under submission at **DMLR**)
       
