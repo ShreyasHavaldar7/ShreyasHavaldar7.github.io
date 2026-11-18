@@ -1,0 +1,322 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { site, socials } from '../data/site';
+import { news } from '../data/news';
+import { publications } from '../data/publications';
+
+const recentNews = news.slice(0, 5);
+// Shown in the order they appear in publications.ts (CaLM, CoBe, then the two first-author conference papers).
+const selectedIds = ['P.3', 'W.4', 'C.2', 'C.1'];
+const selected = publications.filter((p) => p.ids.some((id) => selectedIds.includes(id)));
+---
+<Base>
+  <section class="hero">
+    <img class="portrait" src="/img/portrait.jpg" alt="Portrait of Shreyas Havaldar" width="280" height="280" />
+    <div class="intro">
+      <p class="eyebrow">{site.role}</p>
+      <h1>Shreyas Havaldar</h1>
+      <p class="bio">
+        I’m a third-year PhD student supported by the <strong>Presidential Fellowship</strong>, working with
+        <a href="https://causalai.net/">Prof. Elias Bareinboim</a> in the Causal Artificial Intelligence Lab at
+        Columbia University. My research focuses on <strong>causal reasoning in generative and world models</strong>:
+        understanding when these models can answer counterfactual questions, and building ones that can.
+      </p>
+      <p class="bio">
+        Before Columbia, I was a researcher at
+        <a href="https://research.google/teams/india-research-lab/">Google DeepMind</a> in Bengaluru, working on
+        <strong>trustworthy machine learning</strong> with
+        <a href="https://research.google/people/107631/">Dr. Aravindan Raghuveer</a>,
+        <a href="https://sites.google.com/view/karthikeyan-shanmugam">Dr. Karthikeyan Shanmugam</a> and
+        <a href="https://research.google/people/107857/">Dr. Rishi Saket</a>. I hold a B.Tech. with Honors in Computer
+        Science from <a href="https://www.iith.ac.in/">IIT Hyderabad</a>, where I worked with
+        <a href="https://people.iith.ac.in/vineethnb/index.html">Prof. Vineeth N. Balasubramanian</a> in
+        <a href="https://lab1055.github.io/">Lab 1055</a>, the Machine Learning and Vision Lab.
+      </p>
+      <figure class="quote">
+        <blockquote>Somewhere, something incredible is waiting to be known.</blockquote>
+        <figcaption>Carl Sagan</figcaption>
+      </figure>
+    </div>
+    <div class="meta">
+      <div class="links">
+        <a class="cv" href={site.resume} target="_blank" rel="noopener">CV</a>
+        {socials.filter((s) => s.icon !== 'mail').map((s) => (
+          <a
+            class="icon-link"
+            href={s.href}
+            aria-label={s.label}
+            title={s.label}
+            target={s.href.startsWith('/') ? undefined : '_blank'}
+            rel="noopener"
+          >
+            <Icon name={s.icon} size={19} />
+          </a>
+        ))}
+      </div>
+      <p class="contact" id="contact">
+        <span class="contact-label">Contact</span>
+        <span class="emails">
+          {site.contacts.map((c) => (
+            <span class="addr" set:html={c.replace(/(\{\w+\}|\[at\])/g, '<span class="ph">$1</span>')} />
+          ))}
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section>
+      <h2 class="section-title">News</h2>
+      <ul class="news">
+        {recentNews.map((n) => (
+          <li>
+            <span class="date">{n.date}</span>
+            <span set:html={n.html} />
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Selected work</h2>
+      <ul class="selected">
+        {selected.map((p) => (
+          <li>
+            {p.links[0]
+              ? <a class="sel-title" href={p.links[0].href} target="_blank" rel="noopener">{p.title}</a>
+              : <span class="sel-title">{p.title}</span>}
+            <span class="sel-venue" set:html={p.venue} />
+            {p.note && <span class="sel-venue"> · {p.note}</span>}
+          </li>
+        ))}
+      </ul>
+      <a class="more" href="/publications">All publications →</a>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'photo intro'
+      'meta  intro';
+    gap: 28px 52px;
+    margin-bottom: 64px;
+  }
+  .portrait {
+    grid-area: photo;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    outline: 1px solid var(--line);
+    outline-offset: 6px;
+  }
+  .intro {
+    grid-area: intro;
+    align-self: center;
+  }
+  .meta {
+    grid-area: meta;
+  }
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    color: var(--orange-ink);
+  }
+  h1 {
+    margin: 0 0 14px;
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+    line-height: 1.05;
+    font-weight: 750;
+    letter-spacing: -0.025em;
+    color: var(--navy);
+  }
+  .bio {
+    margin: 0;
+    max-width: 60ch;
+  }
+  .bio + .bio {
+    margin-top: 12px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+  }
+  .cv {
+    margin-right: 10px;
+    padding: 5px 16px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--bg);
+    font-size: 0.92rem;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .cv:hover {
+    background: var(--orange);
+    color: #fff;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 18px 0 0;
+    font-size: 0.9rem;
+  }
+  .emails {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .contact-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange-ink);
+  }
+  .addr {
+    color: var(--text);
+  }
+  .addr :global(.ph) {
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .contact {
+    scroll-margin-top: 90px;
+  }
+  .quote {
+    margin: 24px 0 0;
+    padding: 2px 0 2px 16px;
+    border-left: 2px solid var(--orange);
+  }
+  .quote blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    color: var(--navy);
+    text-wrap: balance;
+  }
+  .quote figcaption {
+    margin-top: 2px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .quote figcaption::before {
+    content: '— ';
+  }
+  .icon-link {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--muted);
+    transition: color 0.15s, background 0.15s;
+  }
+  .icon-link:hover {
+    color: var(--orange-ink);
+    background: var(--tag-bg);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 48px;
+  }
+  .news,
+  .selected {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .news li {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 0.98rem;
+  }
+  .news li:first-child {
+    padding-top: 0;
+  }
+  .date {
+    font-size: 0.82rem;
+    font-weight: 650;
+    color: var(--muted);
+    padding-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .selected li {
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--orange);
+    border-radius: 10px;
+  }
+  .sel-title {
+    display: block;
+    font-weight: 650;
+    line-height: 1.35;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+  .sel-title:hover {
+    text-decoration: underline;
+  }
+  .sel-venue {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .sel-venue :global(a) {
+    color: inherit;
+  }
+  .more {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .more:hover {
+    color: var(--orange-ink);
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'photo'
+        'intro'
+        'meta';
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .portrait {
+      width: 132px;
+      height: 132px;
+      border-radius: 18px;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+  }
+</style>

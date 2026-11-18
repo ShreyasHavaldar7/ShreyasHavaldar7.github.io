@@ -1,0 +1,314 @@
+---
+import Base from '../layouts/Base.astro';
+
+const panels = [
+  { id: 'bio', label: 'Bio' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'service', label: 'Talks & Service' },
+  { id: 'beyond', label: 'Beyond research' },
+];
+
+const experience = [
+  {
+    when: 'Sep 2024 – now',
+    org: 'Causal AI Lab, Columbia University',
+    orgHref: 'https://causalai.net/',
+    role: 'PhD Student · Presidential Fellow',
+    where: 'New York',
+    detail:
+      'Advised by Prof. Elias Bareinboim. Causal reasoning in generative and world models.',
+  },
+  {
+    when: 'Jul 2022 – Aug 2024',
+    org: 'Google DeepMind',
+    orgHref: 'https://research.google/teams/india-research-lab/',
+    role: 'Researcher, Foundational ML',
+    where: 'Bengaluru',
+    detail:
+      'Mentored by <a href="https://research.google/people/107631/">Dr. Aravindan Raghuveer</a>, <a href="https://sites.google.com/view/karthikeyan-shanmugam">Dr. Karthikeyan Shanmugam</a> and <a href="https://research.google/people/107857/">Dr. Rishi Saket</a>. Fair algorithms under distribution shift, scalable learning from aggregate data, and the privacy such aggregation affords.',
+  },
+  {
+    when: 'May – Aug 2021',
+    org: 'Adobe Big Data Experience Lab',
+    orgHref: 'https://research.adobe.com/careers/bangalore/',
+    role: 'Research Intern',
+    where: 'Bengaluru',
+    detail:
+      'With Anandhavelu Natarajan and <a href="https://www.linkedin.com/in/sharmila-reddy-nangi/">Sharmila Reddy Nangi</a>: improving accessibility tagging of documents using interactive human feedback.',
+  },
+  {
+    when: 'Jan 2020 – Dec 2021',
+    org: 'Lab 1055, ML & Vision Lab, IIT Hyderabad',
+    orgHref: 'https://lab1055.github.io/',
+    role: 'Undergraduate Researcher',
+    where: 'Hyderabad',
+    detail:
+      'With <a href="https://people.iith.ac.in/vineethnb/index.html">Prof. Vineeth N. Balasubramanian</a>: influence functions for interpretability, and robustness via vicinal distributions in latent space (Best Paper, AML-CV @ CVPR ’21).',
+  },
+  {
+    when: 'May – Jul 2020',
+    org: 'Japan Infra Waymark Corp.',
+    orgHref: 'https://www.jiw.co.jp/',
+    role: 'Machine Learning Intern',
+    where: 'Tokyo',
+    detail:
+      'With <a href="https://ieeexplore.ieee.org/author/37087993184">Arifumi Matsumoto</a>: researched, improved and deployed semantic segmentation models for aerial imagery.',
+  },
+];
+
+const talks = [
+  ['2024', 'Social Foundations of Computation, Max Planck Institute for Intelligent Systems, Tübingen'],
+  ['2024', 'ICLR ’24, Vienna (poster and Google Research booth)'],
+  ['2024', 'AAAI ’24, Vancouver'],
+  ['2023', 'Regulatable ML Workshop @ NeurIPS ’23 (oral)'],
+  ['2023', 'Algorithmic Fairness through the Lens of Time @ NeurIPS ’23 (spotlight)'],
+];
+
+const service = [
+  ['Reviewing', 'ICLR ’25–’27, NeurIPS ’23, ’24, ’26, ICML ’24, ’26, AAAI ’25, CLeaR ’25–’27'],
+  ['Teaching', 'Causal Inference I (Columbia, Fall ’25); Convex Optimization (Google DeepMind); Computational Complexity (NPTEL); Foundations of ML, Complexity Theory, Data Structures, AI (IIT Hyderabad)'],
+  ['Community', 'PhD Representative, Columbia CS; Founding Social Chair, GrOCS; Co-Editor-in-Chief, <em>Lab Rats</em> grad literary magazine; Co-founder, OneBLR library at Google Bengaluru'],
+];
+---
+<Base title="About" description="About Shreyas Havaldar: research, experience, service and interests.">
+  <h1 class="page-title">About</h1>
+  <p class="page-lede">Researcher, reader, quizzer, and a long-suffering Chelsea fan.</p>
+
+  <div class="seg" role="tablist" aria-label="About sections">
+    {panels.map((p, i) => (
+      <button role="tab" id={`tab-${p.id}`} aria-controls={p.id} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+        {p.label}
+      </button>
+    ))}
+  </div>
+
+  <section id="bio" role="tabpanel" aria-labelledby="tab-bio" class="panel prose">
+    <p>
+      Shreyas Havaldar is a third-year PhD student in
+      <a href="https://causalai.net/">Prof. Elias Bareinboim</a>’s Causal Artificial Intelligence Lab at Columbia
+      University, supported by the <strong>Presidential Fellowship</strong>. Shreyas aspires to build an impactful
+      research career in <strong>trustworthy machine learning</strong>, creating systems that are accountable,
+      accessible, equitable and inclusive, and currently focuses on investigating, understanding and improving
+      <strong>causal reasoning in generative and world models</strong>.
+    </p>
+    <p>
+      Before that, Shreyas was a researcher in the Foundational ML team at
+      <a href="https://research.google/teams/india-research-lab/">Google DeepMind</a>, working on fair algorithms under
+      distribution shift and scalable models for learning from aggregate data, along with the privacy such aggregation
+      affords.
+    </p>
+    <p>
+      Shreyas graduated from <a href="https://www.iith.ac.in/">IIT Hyderabad</a> in 2022 with a B.Tech. with Honors in
+      Computer Science, and worked there on interpretability and robustness with
+      <a href="https://people.iith.ac.in/vineethnb/index.html">Prof. Vineeth N. Balasubramanian</a> in
+      <a href="https://lab1055.github.io/">Lab 1055</a>, the Machine Learning and Vision Lab.
+    </p>
+  </section>
+
+  <section id="experience" role="tabpanel" aria-labelledby="tab-experience" class="panel" hidden>
+    <ol class="timeline">
+      {experience.map((e) => (
+        <li>
+          <div class="when">{e.when}</div>
+          <div>
+            <h3><a href={e.orgHref} target="_blank" rel="noopener">{e.org}</a></h3>
+            <p class="role">{e.role} · {e.where}</p>
+            <p class="detail" set:html={e.detail} />
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section id="service" role="tabpanel" aria-labelledby="tab-service" class="panel" hidden>
+    <h2 class="section-title">Talks & presentations</h2>
+    <ul class="rows">
+      {talks.map(([y, t]) => <li><span class="when">{y}</span><span>{t}</span></li>)}
+    </ul>
+    <h2 class="section-title">Service</h2>
+    <dl class="defs">
+      {service.map(([k, v]) => (
+        <>
+          <dt>{k}</dt>
+          <dd set:html={v} />
+        </>
+      ))}
+    </dl>
+  </section>
+
+  <section id="beyond" role="tabpanel" aria-labelledby="tab-beyond" class="panel prose" hidden>
+    <p>
+      Most of my free time goes to reading books from around the world. Take a look at the
+      <a href="/reading">Reading</a> tab and send me recommendations!
+    </p>
+    <p>When I’m not reading, I’m probably:</p>
+    <ul>
+      <li>
+        watching or playing tennis, football and cricket, and lately F1 and ice hockey (Go Canucks Go!). If you’re a
+        Djokovic or Chelsea fan, how do I not know you already?
+      </li>
+      <li>quizzing or hosting quizzes, debating, or binging random shows</li>
+      <li>exploring new places and picking up random facts about the randomest things under and beyond the sun</li>
+    </ul>
+    <p>
+      I love giving back however I can, from tutoring underprivileged children to writing reading material for
+      disadvantaged students. The best way to learn is to teach.
+    </p>
+    <p>
+      At IIT Hyderabad I represented the institute at <strong>Nihilanth</strong>, the Inter-IIT-IIM Quiz Championship
+      (IIM Calcutta), the <strong>Inter IIT Cultural Meet</strong> (IIT Bombay) and the
+      <strong>Inter IIT Tech Meet</strong> (IIT Guwahati), and headed LitSoc and Zozimus, the literary fest.
+    </p>
+  </section>
+</Base>
+
+<script>
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('.seg [role="tab"]')];
+  function select(tab: HTMLButtonElement, focus = false) {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
+    });
+    if (focus) tab.focus();
+    history.replaceState(null, '', '#' + tab.getAttribute('aria-controls'));
+  }
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (d) select(tabs[(i + d + tabs.length) % tabs.length], true);
+    });
+  });
+  const fromHash = tabs.find((t) => '#' + t.getAttribute('aria-controls') === location.hash);
+  if (fromHash) select(fromHash);
+</script>
+
+<style>
+  .seg {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 32px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .seg button {
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .seg button:hover {
+    color: var(--navy);
+  }
+  .seg button[aria-selected='true'] {
+    background: var(--navy);
+    color: var(--bg);
+  }
+  .panel {
+    max-width: 70ch;
+    animation: fade 0.2s ease;
+  }
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(4px); }
+  }
+  .prose p,
+  .prose ul {
+    margin: 0 0 1em;
+  }
+  .prose li {
+    margin-bottom: 0.35em;
+  }
+  .prose li::marker {
+    color: var(--orange);
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    padding: 0 0 26px;
+    position: relative;
+  }
+  .when {
+    font-size: 0.85rem;
+    font-weight: 650;
+    color: var(--muted);
+    padding-top: 3px;
+    font-variant-numeric: tabular-nums;
+  }
+  .timeline h3 {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+  }
+  .timeline h3 a {
+    text-decoration: none;
+  }
+  .timeline h3 a:hover {
+    text-decoration: underline;
+  }
+  .role {
+    margin: 0 0 4px;
+    font-size: 0.92rem;
+    font-weight: 650;
+    color: var(--orange-ink);
+  }
+  .detail {
+    margin: 0;
+    font-size: 0.97rem;
+    color: var(--muted);
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0 0 36px;
+    padding: 0;
+  }
+  .rows li {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .defs {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 10px 20px;
+    margin: 0;
+  }
+  .defs dt {
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .defs dd {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    .timeline li,
+    .defs {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+    .defs dd {
+      margin-bottom: 12px;
+    }
+  }
+</style>
