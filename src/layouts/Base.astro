@@ -13,6 +13,21 @@ const pageTitle = title ? `${title} · ${site.name}` : site.name;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href: string) => (href === '/' ? path === '/' : path === href || path.startsWith(href + '/'));
 const canonical = new URL(Astro.url.pathname, Astro.site);
+
+// Structured data for search engines and AI summaries (homepage only). No email on purpose.
+const person = path === '/' && {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  url: Astro.site?.href,
+  image: new URL('/img/portrait.jpg', Astro.site).href,
+  jobTitle: 'PhD Student',
+  description: site.description,
+  affiliation: { '@type': 'CollegeOrUniversity', name: 'Columbia University', url: 'https://www.columbia.edu/' },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Indian Institute of Technology Hyderabad', url: 'https://www.iith.ac.in/' },
+  knowsAbout: ['Causal inference', 'Causal reasoning', 'Generative models', 'World models', 'Trustworthy machine learning'],
+  sameAs: socials.filter((s) => s.href.startsWith('http')).map((s) => s.href),
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -28,9 +43,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    {person && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
     <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0d0f1c" media="(prefers-color-scheme: dark)" />
     <script is:inline>
