@@ -9,6 +9,10 @@ export const news: { date: string; html: string }[] = [
     html: '<a href="https://cobe-bench.com/"><strong>CoBe</strong></a>, our benchmark for conversational counterfactual text editing, will be a poster at the <a href="https://trustworthy-ai-for-good.github.io/">AI4GOOD</a> and <a href="https://tai-eval.github.io/">TAE</a> workshops @ <strong>NeurIPS ’26</strong>.',
   },
   {
+    date: 'Nov 2025',
+    html: '<a href="https://arxiv.org/abs/2511.03070"><strong>Epidemiology of Large Language Models: A Benchmark for Observational Distribution Knowledge</strong></a> is out on arXiv, and under submission at <strong>DMLR</strong>.',
+  },
+  {
     date: 'Fall 2025',
     html: 'Teaching Assistant for <strong>Causal Inference I</strong> at Columbia, taught by Prof. Elias Bareinboim.',
   },
