@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1' # every Monday, to pick up new Goodreads reads
 
 permissions:
   contents: read
@@ -19,6 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Refresh Reading list from Goodreads
+        run: node scripts/update-books.mjs
+        continue-on-error: true # keep the committed list if Goodreads is unreachable
       - uses: withastro/action@v4
   deploy:
     needs: build
