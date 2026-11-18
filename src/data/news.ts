@@ -2,7 +2,7 @@
 export const news: { date: string; html: string }[] = [
   {
     date: '2026',
-    html: '<strong>CaLM: Causal Language Modeling for Counterfactual World Simulations</strong> is under submission at <strong>ICLR ’27</strong>. arXiv coming soon!',
+    html: '<strong>CaLM: Causal Language Modeling for Counterfactual World Simulations</strong>, coming soon!',
   },
   {
     date: '2026',
