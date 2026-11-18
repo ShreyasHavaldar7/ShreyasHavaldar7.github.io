@@ -62,9 +62,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
             CV<Icon name="arrow" size={13} />
           </a>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-          <span class="i-sun"><Icon name="sun" /></span>
-          <span class="i-moon"><Icon name="moon" /></span>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Toggle dark mode">
+          <span class="opt opt-light"><Icon name="sun" size={15} /></span>
+          <span class="opt opt-dark"><Icon name="moon" size={15} /></span>
         </button>
       </div>
     </header>
@@ -89,13 +90,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     </footer>
 
     <script>
+      const root = document.documentElement;
       const btn = document.querySelector('.theme-toggle');
+      const dark = matchMedia('(prefers-color-scheme: dark)');
+      const current = () => root.dataset.theme ?? (dark.matches ? 'dark' : 'light');
+      const sync = () => btn?.setAttribute('aria-checked', String(current() === 'dark'));
+      sync();
+      dark.addEventListener('change', sync);
       btn?.addEventListener('click', () => {
-        const root = document.documentElement;
-        const current = root.dataset.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        const next = current === 'dark' ? 'light' : 'dark';
+        const next = current() === 'dark' ? 'light' : 'dark';
         root.dataset.theme = next;
         try { localStorage.setItem('theme', next); } catch {}
+        sync();
       });
     </script>
   </body>
@@ -113,7 +119,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   .header-inner {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     height: 64px;
   }
   .wordmark {
@@ -163,27 +169,79 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     border-radius: 3px 3px 0 0;
     background: var(--orange);
   }
-  .theme-toggle {
+  .nav-sep {
     flex: none;
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
+    width: 1px;
+    height: 22px;
+    background: var(--line);
+  }
+  /* Sun/moon pill switch; the navy thumb slides under the active icon. */
+  .theme-toggle {
+    --opt: 28px;
+    position: relative;
+    flex: none;
+    display: inline-flex;
+    padding: 3px;
     border: 1px solid var(--line);
-    border-radius: 50%;
+    border-radius: 999px;
     background: var(--surface);
-    color: var(--muted);
     cursor: pointer;
+    transition: border-color 0.15s;
   }
   .theme-toggle:hover {
-    color: var(--orange);
+    border-color: color-mix(in srgb, var(--orange) 60%, var(--line));
   }
-  .i-moon { display: none; }
-  :global(:root[data-theme='dark']) .i-sun { display: none; }
-  :global(:root[data-theme='dark']) .i-moon { display: block; }
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: var(--opt);
+    height: var(--opt);
+    border-radius: 50%;
+    background: var(--navy);
+    transition: transform 0.25s cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  .opt {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: var(--opt);
+    height: var(--opt);
+    color: var(--muted);
+    transition: color 0.25s;
+  }
+  .opt :global(svg) {
+    display: block;
+  }
+  .opt-light {
+    color: var(--bg);
+  }
+  :global(:root[data-theme='dark']) .theme-toggle::before {
+    transform: translateX(var(--opt));
+  }
+  :global(:root[data-theme='dark']) .opt-light {
+    color: var(--muted);
+  }
+  :global(:root[data-theme='dark']) .opt-dark {
+    color: var(--bg);
+  }
   @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme='light'])) .i-sun { display: none; }
-    :global(:root:not([data-theme='light'])) .i-moon { display: block; }
+    :global(:root:not([data-theme='light'])) .theme-toggle::before {
+      transform: translateX(var(--opt));
+    }
+    :global(:root:not([data-theme='light'])) .opt-light {
+      color: var(--muted);
+    }
+    :global(:root:not([data-theme='light'])) .opt-dark {
+      color: var(--bg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .theme-toggle::before,
+    .opt {
+      transition: none;
+    }
   }
 
   .site-footer {
@@ -225,6 +283,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     }
     .theme-toggle {
       margin-left: auto;
+    }
+    .nav-sep {
+      display: none;
     }
     .tabs {
       order: 3;
