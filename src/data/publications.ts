@@ -18,10 +18,9 @@ export const publications: Publication[] = [
     ids: ['P.3'],
     title: 'CaLM: Causal Language Modeling for Counterfactual World Simulations',
     authors: 'Havaldar, S., Jalaldoust, K., Pan, Y., and Bareinboim, E.',
-    venue: 'Under submission at <strong>ICLR ’27</strong>',
+    venue: 'Coming soon',
     year: 2026,
     kinds: ['Preprint'],
-    note: 'arXiv coming soon',
     links: [],
   },
   {
