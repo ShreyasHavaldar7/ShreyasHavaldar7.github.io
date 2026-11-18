@@ -6,8 +6,8 @@ import { news } from '../data/news';
 import { publications } from '../data/publications';
 
 const recentNews = news.slice(0, 5);
-// Shown in the order they appear in publications.ts (CaLM, CoBe, then the two first-author conference papers).
-const selectedIds = ['P.3', 'W.4', 'C.2', 'C.1'];
+// Shown in the order they appear in publications.ts (CaLM, CoBe, LLM Epidemiology, then the two first-author conference papers).
+const selectedIds = ['P.3', 'W.4', 'P.2', 'C.2', 'C.1'];
 const selected = publications.filter((p) => p.ids.some((id) => selectedIds.includes(id)));
 ---
 <Base>
