@@ -1,5 +1,269 @@
 [
  {
+  "title": "The Book Thief",
+  "author": "Markus Zusak",
+  "url": "https://www.goodreads.com/review/show/3649330454",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522157426l/19063._SX98_.jpg",
+  "rating": 4,
+  "review": "Finally got through this book, it was a long time pending. The writing and setup is superb, the idea of death as a narrator is quite novel and apropos for the theme, the period and the story. Loved the human-ness of the narrative, and ho..."
+ },
+ {
+  "title": "Inverting the Pyramid: The History of Football Tactics",
+  "author": "Jonathan Wilson",
+  "url": "https://www.goodreads.com/review/show/5397573167",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328859803l/3621358._SX98_.jpg",
+  "rating": 4,
+  "review": "Got to this book just in time for the world cup and the friend who recommended it moving to town. I loved the temporal take on the tactical evolution of the sport and how natural the progression seemed. I also liked the narrative driven..."
+ },
+ {
+  "title": "The Three-Body Problem",
+  "author": "Liu Cixin",
+  "url": "https://www.goodreads.com/review/show/8134990382",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1415428227l/20518872._SX98_.jpg",
+  "rating": 2,
+  "review": "Been a long time pending review and argh I'm just so frustrated by this book. All the praise and love made me feel so excited for a contemporary sci-fi book named after one of my favorite problems in physics. The main qualm I have with..."
+ },
+ {
+  "title": "I Want to Die But I Want to Eat Tteokbokki",
+  "author": "Baek Se-hee",
+  "url": "https://www.goodreads.com/review/show/8191432306",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1644695663l/60400779._SX98_.jpg",
+  "rating": 3,
+  "review": "Very personal and very intimate. But very little substance to be honest. It was almost like reading someone's most intrusive thoughts. I liked the conversational style of the book, with a nice back and forth, dissecting each thought. The..."
+ },
+ {
+  "title": "Yellowface",
+  "author": "R.F. Kuang",
+  "url": "https://www.goodreads.com/review/show/6258896260",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1671336608l/62047984._SX98_.jpg",
+  "rating": 2,
+  "review": "Sigh I tried to give RF Kuang a second shot. But the writing is so so forced. The plot seems to move along only to satisfy a singular purpose and while the book sets out to be a very fast paced and intriguing read, it just spirals out, d..."
+ },
+ {
+  "title": "I Killed Zoe Spanos",
+  "author": "Kit Frick",
+  "url": "https://www.goodreads.com/review/show/8181305276",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1570968509l/50202540._SX98_.jpg",
+  "rating": 1,
+  "review": "What the fuck was that. The most inconsistent narrative I've read, ever. And that too for a crime thriller whose plot needs to be water tight for things to align and actually make sense. What even was the point of the entire confession a..."
+ },
+ {
+  "title": "The Myth of Sisyphus, and Other Essays",
+  "author": "Albert Camus",
+  "url": "https://www.goodreads.com/review/show/8181289304",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1533718219l/11987._SX98_.jpg",
+  "rating": 3,
+  "review": "Camus is always a confusing author. But this might be the most confusing book of him I've read so far. I love the discussion on the point of life, and the objectives and goals and how to go about defining them. But it feels like a high..."
+ },
+ {
+  "title": "Born a Crime: Stories from a South African Childhood",
+  "author": "Trevor Noah",
+  "url": "https://www.goodreads.com/review/show/5130484796",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253._SX98_.jpg",
+  "rating": 5,
+  "review": "Trevor Noah does a great job of creating a narrative that feels fitting for a fictional account but yet doesn't stray from the experiences he had as a kid. The sense of identity and belonging is one of the most important parts while grow..."
+ },
+ {
+  "title": "The Overcoat",
+  "author": "Nikolai Gogol",
+  "url": "https://www.goodreads.com/review/show/5634400614",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1570956428l/537094._SX98_.jpg",
+  "rating": 4,
+  "review": "Reading the book that laid the inspiration for a book I'd just finished felt like a natural next step. And it didn't disappoint. I've been struggling with reading long form Russian novels, yet the elegance, simplicity and the ingenuity ..."
+ },
+ {
+  "title": "The Namesake",
+  "author": "Jhumpa Lahiri",
+  "url": "https://www.goodreads.com/review/show/4727506106",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1480106986l/33917._SX98_.jpg",
+  "rating": 5,
+  "review": "Very few books have the ability to make you pause and digest everything you've read, and very few books make you feel that you're not simply reading but living a new life. Namesake was one of those books. Having a Columbia connect, an a..."
+ },
+ {
+  "title": "Normal People",
+  "author": "Sally Rooney",
+  "url": "https://www.goodreads.com/review/show/7185467541",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1571423190l/41057294._SX98_.jpg",
+  "rating": 3,
+  "review": "This is again one of these typical Sally Rooney books which has your run of the mill everyday characters, yet draws you into their lives like a wallflower. You're a part of their mundane, and through this mundane do you see the messed up..."
+ },
+ {
+  "title": "Ender’s Game",
+  "author": "Orson Scott Card",
+  "url": "https://www.goodreads.com/review/show/5715823271",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1408303130l/375802._SY160_.jpg",
+  "rating": 2,
+  "review": "It's one of those weird books which is revered by so many that it's impossible to not read it to the end, yet I didn't want to. The characters are some of the most unidimensional, flat, rigid humans I've come across. It's like they're se..."
+ },
+ {
+  "title": "The Testaments",
+  "author": "Margaret Atwood",
+  "url": "https://www.goodreads.com/review/show/5058929937",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1549292344l/42975172._SX98_.jpg",
+  "rating": 4,
+  "review": "Margaret Atwood is incredibly good at writing memoirs of people who didn't exist. It's a brilliant eavesdropping kind of situation where all these different narratives move ahead in time and tie up at the end. The world building and plot..."
+ },
+ {
+  "title": "Conversations with Friends",
+  "author": "Sally Rooney",
+  "url": "https://www.goodreads.com/review/show/7415953672",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638729263l/32187419._SX98_.jpg",
+  "rating": 3,
+  "review": "It's such a weird book that pulls you in with these flawed messed up characters and binds you in a haze. It's unclear what the characters aim to do and what their overall take on life is, but the relationships between different people ar..."
+ },
+ {
+  "title": "Eleanor Oliphant Is Completely Fine",
+  "author": "Gail Honeyman",
+  "url": "https://www.goodreads.com/review/show/5623030732",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545392687l/43303600._SX98_.jpg",
+  "rating": 4,
+  "review": "Eleanor Oliphant is an interesting character. The author does a great job of portraying her POV without demeaning or belittling her world view. Even the tragic and dark elements are dealt with well. The evolution of the character and th..."
+ },
+ {
+  "title": "Babel",
+  "author": "R.F. Kuang",
+  "url": "https://www.goodreads.com/review/show/7194381926",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1677361825l/57945316._SX98_.jpg",
+  "rating": 2,
+  "review": "I have so many mixed feelings about this book. What started out as an incredible premise to etch out an incredible story unfortunately turned into a rather drab, linear and fairly superficial narrative. The characters lacked any real p..."
+ },
+ {
+  "title": "The Vegetarian",
+  "author": "Han Kang",
+  "url": "https://www.goodreads.com/review/show/7176215871",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1728661771l/25489025._SX98_.jpg",
+  "rating": 1,
+  "review": "This book was confusing. For such a long time I was sure it was written by a man because the women were written so oddly, overly sexualized, degraded to mere objects of desires. The author tries to give a Murakami-esque feel to the book..."
+ },
+ {
+  "title": "The Answer Is No",
+  "author": "Fredrik Backman",
+  "url": "https://www.goodreads.com/review/show/7181926264",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1727897163l/219876684._SX98_.jpg",
+  "rating": 4,
+  "review": "Oh man, Fredrik Backman manages to charm even in a mere 70 pages of fiction. It's an art that needs to be preserved and I hope he pumps out even more books. Overall a very stereotypical Backman, endearing characters, goofy well natured ..."
+ },
+ {
+  "title": "Never Let Me Go",
+  "author": "Kazuo Ishiguro",
+  "url": "https://www.goodreads.com/review/show/4727506183",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1353048590l/6334._SX98_.jpg",
+  "rating": 2,
+  "review": "I have mixed feelings about this book. It gave me weirdly immersive feels but yet didn't pull me in enough? Like I was invested in the story but didn't care much for what happened to the characters as the bonds never developed. While..."
+ },
+ {
+  "title": "Steve Jobs",
+  "author": "Walter Isaacson",
+  "url": "https://www.goodreads.com/review/show/6701304139",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560819186l/52054094._SX98_SY160_.jpg",
+  "rating": 3,
+  "review": "While the role of Steve Jobs as a modern visionary cannot be overstated, the author reveres him like a god, above mere mortals, overlooking his misjudgements. Particularly his handling of relationships, be it as a young adult or a grown..."
+ },
+ {
+  "title": "A Good Girl's Guide to Murder",
+  "author": "Holly Jackson",
+  "url": "https://www.goodreads.com/review/show/4520234032",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545494980l/40916679._SX98_.jpg",
+  "rating": 3,
+  "review": "A solid young adult mystery read but riddled with classic red herrings and tropes which might seem novel but are predictable from miles away. A few twists were well setup but the misdirection was amateur. Given the context and setting o..."
+ },
+ {
+  "title": "Tomorrow, and Tomorrow, and Tomorrow",
+  "author": "Gabrielle Zevin",
+  "url": "https://www.goodreads.com/review/show/5271339787",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1636978687l/58784475._SX98_.jpg",
+  "rating": 4,
+  "review": "Oh boy what a book to start the year. The feels were on point, the characters very beautifully written, eerily relatable and their stories were flowing very naturally. Not a single character arc seemed undercooked. The time jumps also s..."
+ },
+ {
+  "title": "Coraline",
+  "author": "Neil Gaiman",
+  "url": "https://www.goodreads.com/review/show/5086829846",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1493497435l/17061._SX98_.jpg",
+  "rating": 3,
+  "review": "Eh. A quite rapid read, which took me ages for God knows what reason. Didn't feel drawn into the story as much and the characters felt drab. The visualization and chaotic imagination is on point though."
+ },
+ {
+  "title": "My Grandmother Asked Me to Tell You She's Sorry",
+  "author": "Fredrik Backman",
+  "url": "https://www.goodreads.com/review/show/5723725292",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1461904020l/23604559._SX98_.jpg",
+  "rating": 2,
+  "review": "Fredrik Backman has set too high a bar for himself and I worry I've read all his best books first. This one felt like a drag. While his strength in writing characters still comes through, the plot moves very little and the character mot..."
+ },
+ {
+  "title": "The Nose",
+  "author": "Nikolai Gogol",
+  "url": "https://www.goodreads.com/review/show/6748728799",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1423750462l/24874312._SX98_.jpg",
+  "rating": 5,
+  "review": "Nikolai Gogol has some trick up his sleeve, that makes such none-sensical, whimsical plots appear engrossing and engaging. All the symbolism and imagery comes together in a beautiful way in what seems like a nightmare come true. Charact..."
+ },
+ {
+  "title": "The Plague",
+  "author": "Albert Camus",
+  "url": "https://www.goodreads.com/review/show/5397587209",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1503362434l/11989._SX98_.jpg",
+  "rating": 4,
+  "review": "Well I'm conflicted about how to feel after reading this book. I guess Camus has that effect on people. Given that we just went through a pandemic which rocked our worlds, seeing the life of people stuck in a plague epidemic sketched ou..."
+ },
+ {
+  "title": "The Squabble",
+  "author": "Nikolai Gogol",
+  "url": "https://www.goodreads.com/review/show/6272761995",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328728914l/635041._SX98_.jpg",
+  "rating": 3,
+  "review": "I'm slightly off-put by the sheer realism in Gogol's work. It feels like you're reading a newspaper account of an incident in some corner of a globe. And the names, oh boy, the complicated names don't help at all. The story telling is q..."
+ },
+ {
+  "title": "Dear John",
+  "author": "Nicholas Sparks",
+  "url": "https://www.goodreads.com/review/show/6234351357",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1500020635l/6063230._SX98_.jpg",
+  "rating": 4,
+  "review": "Well that was an emotional rollercoaster. While the book did get me teary eyed multiple times, and drowned me in an existential crisis multiple times, the ending left me bittersweet (like most Nicholas Spark books). Even slightly conflic..."
+ },
+ {
+  "title": "Of Spins, Sixes and Surprises: 50 Defining Moments in Indian Cricket",
+  "author": "Shom Biswas",
+  "url": "https://www.goodreads.com/review/show/6234551934",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1698925287l/200668426._SX98_.jpg",
+  "rating": 5,
+  "review": "Quite an engrossing read, taking you on a magic carpet ride, through the eras of cricket that shaped India not only as a sporting nation but even a country. Beautiful work to rekindle the nostalgia of the good ol' days and recount the h..."
+ },
+ {
+  "title": "Old-Fashioned Farmers",
+  "author": "Nikolai Gogol",
+  "url": "https://www.goodreads.com/review/show/6232032372",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1347512134l/6551087._SX98_.jpg",
+  "rating": 3,
+  "review": "My first Gogol, and I'm still processing, it was quaint and weird and plain and pointless yet quite addictive at times. It felt like going through someone's journal but that someone you had known quite well?"
+ },
+ {
+  "title": "The Winners",
+  "author": "Fredrik Backman",
+  "url": "https://www.goodreads.com/review/show/5379239389",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1645483248l/60318890._SX98_.jpg",
+  "rating": 5,
+  "review": "Well, that was one of the longest books I've read, and oh boy was it worth every page. To close out a trilogy with so so many characters and so many arcs, in a relatively uncluttered and conclusive way is no easy task. But Backman does..."
+ },
+ {
+  "title": "Sophie's World",
+  "author": "Jostein Gaarder",
+  "url": "https://www.goodreads.com/review/show/6089206408",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659964414l/324974._SY160_.jpg",
+  "rating": 4,
+  "review": "I think the book was confused. It didn't know if it wanted to be a treatise on philosophy or a mystery novel. Independently both sections felt good, especially the initial chapters with just Sophie and Alberto in the frame. While the met..."
+ },
+ {
+  "title": "I, Robot",
+  "author": "Isaac Asimov",
+  "url": "https://www.goodreads.com/review/show/4725669188",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1609035271l/41804._SX98_.jpg",
+  "rating": 4,
+  "review": "Well honestly, this one took a while. I loved the format of a memoir morphing into a short story collection, with Susie tying everything together. I also loved how each story set out to nullify some assumption that a reader would have de..."
+ },
+ {
   "title": "One Hundred Years of Solitude",
   "author": "Gabriel García Márquez",
   "url": "https://www.goodreads.com/review/show/4390360868",
@@ -17,7 +281,7 @@
  },
  {
   "title": "Calvin and Hobbes 3: In the Shadow of the Night",
-  "author": "Nigel Henbest,Bill Watterson,ill Watterson,Bill Watterson,",
+  "author": "Bill Watterson",
   "url": "https://www.goodreads.com/review/show/5696858104",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348297421l/982247._SY160_.jpg",
   "rating": 5,
@@ -51,15 +315,15 @@
   "title": "The Fall",
   "author": "Albert Camus",
   "url": "https://www.goodreads.com/review/show/5397727520",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1467904855l/11991._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1738704293l/11991._SX98_.jpg",
   "rating": 4,
-  "review": "I'm highly confused about this book. I don't know how to feel about it, and I mostly don't know what Camus wants to say.\n\nThe sections I do understand feel quite relatable so the book did a good vibe overall. But yeah as confused as ever."
+  "review": "I'm highly confused about this book. I don't know how to feel about it, and I mostly don't know what Camus wants to say. The sections I do understand feel quite relatable so the book did a good vibe overall. But yeah as confused as ever."
  },
  {
   "title": "Before the Coffee Gets Cold",
   "author": "Toshikazu Kawaguchi",
   "url": "https://www.goodreads.com/review/show/5341294438",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1560955053l/44421460._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1704153539l/44421460._SX98_.jpg",
   "rating": 3,
   "review": "Okay this is a book that evoked very mixed feelings from me. First of all the premise is very cool, but the setup is extremely brittle and flawed. By bringing in strict rules in time travel you end up having gaps in those rules instead o..."
  },
@@ -89,7 +353,7 @@
  },
  {
   "title": "Tinkle 799",
-  "author": "Multiple writers",
+  "author": "Tinkle",
   "url": "https://www.goodreads.com/review/show/5581551073",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1683290862l/149316400._SX98_.jpg",
   "rating": 3,
@@ -109,7 +373,7 @@
   "url": "https://www.goodreads.com/review/show/5346305331",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1482108618l/33413128._SX98_.jpg",
   "rating": 5,
-  "review": "Sometimes it's difficult to put into words emotions that a book makes you feel when they range as much as they do when one reads Beartown. \n\nThe complexity of the characters and the way their relationships pan out throughout the course o..."
+  "review": "Sometimes it's difficult to put into words emotions that a book makes you feel when they range as much as they do when one reads Beartown. The complexity of the characters and the way their relationships pan out throughout the course o..."
  },
  {
   "title": "Strange Planet",
@@ -125,7 +389,7 @@
   "url": "https://www.goodreads.com/review/show/4727505377",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1530713735l/40718216._SX98_.jpg",
   "rating": 5,
-  "review": "There's been so much said about this immaculate piece of literature that anything I say to add to it would be like adding a drop to the ocean.\n\nSimply the best work of creative art that has ever graced my senses."
+  "review": "There's been so much said about this immaculate piece of literature that anything I say to add to it would be like adding a drop to the ocean. Simply the best work of creative art that has ever graced my senses."
  },
  {
   "title": "The Silent Patient",
@@ -149,7 +413,7 @@
   "url": "https://www.goodreads.com/review/show/5253566312",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348259158l/150736._SX98_.jpg",
   "rating": 4,
-  "review": "An interesting take on courtroom dramas, creating an immersive experience for the reader. It's more of a psychological drama than a crime drama as the verdict is never passed, but is simply left for the reader to make.\n\nTempted to pick u..."
+  "review": "An interesting take on courtroom dramas, creating an immersive experience for the reader. It's more of a psychological drama than a crime drama as the verdict is never passed, but is simply left for the reader to make. Tempted to pick u..."
  },
  {
   "title": "Anxious People",
@@ -157,7 +421,7 @@
   "url": "https://www.goodreads.com/review/show/5058924557",
   "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1594234890l/53799686._SX98_.jpg",
   "rating": 5,
-  "review": "Maaaaaaan, Fredrik Backman is quickly becoming one of my fav writers. His writing style and fluidity is simply too good.\n\nAnother great feel good book and one that keeps you hooked."
+  "review": "Maaaaaaan, Fredrik Backman is quickly becoming one of my fav writers. His writing style and fluidity is simply too good. Another great feel good book and one that keeps you hooked."
  },
  {
   "title": "Tinkle Double Digest 8",
@@ -195,15 +459,15 @@
   "title": "Project Hail Mary",
   "author": "Andy Weir",
   "url": "https://www.goodreads.com/review/show/5058936018",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1597695864l/54493401._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1764703833l/54493401._SX98_.jpg",
   "rating": 5,
-  "review": "The best love story ever written •́⁠ ⁠ ⁠‿⁠ ⁠,⁠•̀"
+  "review": "The best love story ever written •́⁠ ⁠ ⁠‿⁠ ⁠,⁠•̀"
  },
  {
   "title": "The Martian",
   "author": "Andy Weir",
   "url": "https://www.goodreads.com/review/show/4725673548",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1377968571l/18401393._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1730462983l/18401393._SY160_.jpg",
   "rating": 5,
   "review": ""
  },
@@ -251,7 +515,7 @@
   "title": "In Silhouette",
   "author": "Louise Kennedy",
   "url": "https://www.goodreads.com/review/show/4764987849",
-  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-675b3b2743c83e96e2540d2929d5f4d2.png",
   "rating": 3,
   "review": ""
  },
@@ -259,7 +523,7 @@
   "title": "Comme",
   "author": "Paul Dalla Rosa",
   "url": "https://www.goodreads.com/review/show/4764986065",
-  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-675b3b2743c83e96e2540d2929d5f4d2.png",
   "rating": 3,
   "review": ""
  },
@@ -275,7 +539,7 @@
   "title": "A Partial List of the Saved",
   "author": "Danielle McLaughlin",
   "url": "https://www.goodreads.com/review/show/4763161126",
-  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-675b3b2743c83e96e2540d2929d5f4d2.png",
   "rating": 3,
   "review": ""
  },
@@ -283,7 +547,7 @@
   "title": "Holiday Classics",
   "author": "O. Henry",
   "url": "https://www.goodreads.com/review/show/4761352504",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1293054730l/9993477._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1703960764l/9993477._SX98_.jpg",
   "rating": 5,
   "review": ""
  },
@@ -323,7 +587,7 @@
   "title": "Escape from Camp Wannabarf",
   "author": "Peter Hannan",
   "url": "https://www.goodreads.com/review/show/4663704793",
-  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
+  "cover": "https://s.gr-assets.com/assets/nophoto/book/111x148-675b3b2743c83e96e2540d2929d5f4d2.png",
   "rating": 5,
   "review": ""
  },
@@ -339,7 +603,7 @@
   "title": "The Girl on the Train",
   "author": "Paula Hawkins",
   "url": "https://www.goodreads.com/review/show/4307380875",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1574805682l/22557272._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1748242265l/22557272._SX98_.jpg",
   "rating": 4,
   "review": "The feeling of solving a mystery before the book reveals it is still peak happiness."
  },
@@ -347,7 +611,7 @@
   "title": "Night",
   "author": "Elie Wiesel",
   "url": "https://www.goodreads.com/review/show/4537198967",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1575073611l/1617._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1709507006l/1617._SX98_.jpg",
   "rating": 5,
   "review": ""
  },
@@ -371,7 +635,7 @@
   "title": "The Complete Maus",
   "author": "Art Spiegelman",
   "url": "https://www.goodreads.com/review/show/4307423218",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327354180l/15195._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1788759416l/15195._SX98_.jpg",
   "rating": 5,
   "review": ""
  },
@@ -411,7 +675,7 @@
   "title": "Tinkle Digest 1",
   "author": "Anant Pai",
   "url": "https://www.goodreads.com/review/show/4425969262",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1507567469l/36381886.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1721717110l/36381886._SX98_.jpg",
   "rating": 0,
   "review": ""
  },
@@ -427,7 +691,7 @@
   "title": "The Stranger",
   "author": "Albert Camus",
   "url": "https://www.goodreads.com/review/show/4307399110",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1590930002l/49552._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1738704267l/49552._SX98_.jpg",
   "rating": 5,
   "review": ""
  },
@@ -435,7 +699,7 @@
   "title": "Zero Hour",
   "author": "Ray Bradbury",
   "url": "https://www.goodreads.com/review/show/4408457678",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1629635795l/58828491._SX98_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1613418731l/57064762._SX98_.jpg",
   "rating": 3,
   "review": ""
  },
@@ -531,271 +795,7 @@
   "title": "The Complete Persepolis",
   "author": "Marjane Satrapi",
   "url": "https://www.goodreads.com/review/show/4306700444",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348780083l/13413371._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 4: Head of the Class",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196605",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352262818l/214864._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 5: The Facts of Life",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196683",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1406987902l/214865._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 3: Perfect Strangers",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196530",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1376935261l/524498._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 7: Three's Company",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196798",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387345687l/402223._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 6: A Different World",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196734",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352262881l/402225._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 8: My Favorite Martian",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196859",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352262957l/643534._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 9: Out of This World",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196981",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352262991l/1020032._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 10: Who's the Boss?",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197045",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352263046l/4670831._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 1: Family Matters",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196357",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288076032l/214867._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 2: Eight Is Enough",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150196423",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388772985l/402228._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 11: Happy Days",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197105",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352263074l/6232218._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 12: Still Standing",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197200",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352263103l/7222210._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 13: Growing Pains",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197296",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388345549l/8549745._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 14: The Viltrumite War",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197363",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388292987l/10557843._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 15: Get Smart",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197496",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320368647l/13003894._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 16: Family Ties",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197562",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1352263207l/15705318._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 17: What's Happening",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197651",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1367767345l/16094382._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 18: The Death of Everyone",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197716",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1376881874l/17818461._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 19: The War at Home",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150197878",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1384866279l/18853322._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 20: Friends",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198010",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1409161310l/23093362._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 21: Modern Family",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198101",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1426643984l/25165311._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 22: Reboot?",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198165",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1454934401l/26779835._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 23: Full House",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198284",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474289058l/30896673._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 24: The End of All Things, Part One",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198380",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1498399919l/34910709._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "Invincible, Vol. 25: The End of All Things, Part Two",
-  "author": "Robert Kirkman",
-  "url": "https://www.goodreads.com/review/show/4150198479",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1519228758l/35989507._SX98_.jpg",
-  "rating": 0,
-  "review": ""
- },
- {
-  "title": "The Girl Who Kicked the Hornet's Nest",
-  "author": "Stieg Larsson",
-  "url": "https://www.goodreads.com/review/show/4134127526",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327708260l/6892870._SX98_.jpg",
-  "rating": 5,
-  "review": ""
- },
- {
-  "title": "Murder on the Orient Express",
-  "author": "Agatha Christie",
-  "url": "https://www.goodreads.com/review/show/4390367106",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1610704688l/21099828._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "And Then There Were None",
-  "author": "Agatha Christie",
-  "url": "https://www.goodreads.com/review/show/4390373845",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449488704l/28116072._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "Fahrenheit 451",
-  "author": "Ray Bradbury",
-  "url": "https://www.goodreads.com/review/show/4129061923",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1383718290l/13079982._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "Tuesdays with Morrie",
-  "author": "Mitch Albom",
-  "url": "https://www.goodreads.com/review/show/4114259549",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1423763749l/6900._SX98_.jpg",
-  "rating": 5,
-  "review": ""
- },
- {
-  "title": "The Mysterious Affair at Styles",
-  "author": "Agatha Christie",
-  "url": "https://www.goodreads.com/review/show/4108228172",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386922393l/16343._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "Kafka on the Shore",
-  "author": "Haruki Murakami",
-  "url": "https://www.goodreads.com/review/show/4043632676",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1429638085l/4929._SX98_.jpg",
-  "rating": 4,
-  "review": ""
- },
- {
-  "title": "The Mousetrap and Other Plays",
-  "author": "Agatha Christie",
-  "url": "https://www.goodreads.com/review/show/4039340292",
-  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1697531016l/121655._SY160_.jpg",
+  "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1715264871l/13413371._SX98_.jpg",
   "rating": 4,
   "review": ""
  }
