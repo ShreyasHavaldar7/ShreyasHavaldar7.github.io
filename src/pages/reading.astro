@@ -1,0 +1,255 @@
+---
+import Base from '../layouts/Base.astro';
+import books from '../data/books.json';
+
+const PER_PAGE = 18;
+const pages = Math.ceil(books.length / PER_PAGE);
+const bigCover = (u: string) => u.replace(/\._S[XY]\d+_/, '._SY320_');
+---
+<Base title="Reading" description="Books Shreyas Havaldar has read recently, with ratings and short reviews.">
+  <h1 class="page-title">Reading</h1>
+  <p class="page-lede">
+    A snapshot of my recent reads. Hover over a cover for a peek at my thoughts, or open it to read the full review;
+    the whole shelf is on
+    <a href="https://www.goodreads.com/user/show/118954168-shreyas-havaldar">Goodreads</a>.
+  </p>
+
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Filter books">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="fav" aria-pressed="false">5★ favourites</button>
+      <button type="button" data-f="rev" aria-pressed="false">With reviews</button>
+    </div>
+    <span class="count muted" aria-live="polite"></span>
+  </div>
+
+  <ul class="shelf">
+    {books.map((b, i) => (
+      <li class="book" data-i={i} data-rating={b.rating} data-rev={b.review ? '1' : '0'} hidden={i >= PER_PAGE}>
+        <a href={b.url} target="_blank" rel="noopener" class="cover-link">
+          <img src={bigCover(b.cover)} alt="" loading="lazy" width="160" height="240" class="cover" />
+          <div class="peek">
+            <p class="peek-title">{b.title}</p>
+            <p class="peek-author">{b.author}</p>
+            {b.rating > 0 && <p class="stars" aria-label={`${b.rating} out of 5 stars`}>{'★'.repeat(b.rating)}<span>{'★'.repeat(5 - b.rating)}</span></p>}
+            {b.review && <p class="peek-review">{b.review}</p>}
+          </div>
+        </a>
+        <p class="caption">{b.title}</p>
+      </li>
+    ))}
+  </ul>
+
+  <nav class="pager" aria-label="Book pages">
+    <button type="button" class="prev" aria-label="Previous page">←</button>
+    <span class="pageinfo"></span>
+    <button type="button" class="next" aria-label="Next page">→</button>
+  </nav>
+</Base>
+
+<script define:vars={{ PER_PAGE }}>
+  const items = [...document.querySelectorAll('.book')];
+  const btns = [...document.querySelectorAll('.seg button')];
+  const info = document.querySelector('.pageinfo');
+  const count = document.querySelector('.count');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let filter = 'all';
+  let page = 0;
+
+  function matching() {
+    return items.filter((el) =>
+      filter === 'fav' ? el.dataset.rating === '5' : filter === 'rev' ? el.dataset.rev === '1' : true,
+    );
+  }
+  function render() {
+    const list = matching();
+    const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+    page = Math.min(page, pages - 1);
+    const shown = new Set(list.slice(page * PER_PAGE, (page + 1) * PER_PAGE));
+    items.forEach((el) => (el.hidden = !shown.has(el)));
+    info.textContent = `${page + 1} / ${pages}`;
+    count.textContent = `${list.length} books`;
+    prev.disabled = page === 0;
+    next.disabled = page >= pages - 1;
+  }
+  btns.forEach((b) =>
+    b.addEventListener('click', () => {
+      filter = b.dataset.f;
+      page = 0;
+      btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      render();
+    }),
+  );
+  prev.addEventListener('click', () => { page--; render(); });
+  next.addEventListener('click', () => { page++; render(); });
+  render();
+</script>
+
+<style>
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+    margin-bottom: 28px;
+  }
+  .count {
+    font-size: 0.9rem;
+  }
+  .seg {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .seg button {
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .seg button:hover {
+    color: var(--navy);
+  }
+  .seg button[aria-pressed='true'] {
+    background: var(--navy);
+    color: var(--bg);
+  }
+
+  .shelf {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 26px 20px;
+  }
+  .book[hidden] {
+    display: none;
+  }
+  .cover-link {
+    position: relative;
+    display: block;
+    aspect-ratio: 2 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--line);
+    box-shadow: var(--shadow), 0 0 0 1px var(--line);
+    transition: transform 0.2s ease;
+  }
+  .cover-link:hover,
+  .cover-link:focus-visible {
+    transform: translateY(-3px);
+  }
+  .cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .peek {
+    position: absolute;
+    inset: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: color-mix(in srgb, #000060 92%, transparent);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    overflow: hidden;
+  }
+  .cover-link:hover .peek,
+  .cover-link:focus-visible .peek {
+    opacity: 1;
+  }
+  .peek p {
+    margin: 0;
+  }
+  .peek-title {
+    font-weight: 700;
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+  .peek-author {
+    font-size: 0.78rem;
+    opacity: 0.8;
+  }
+  .stars {
+    color: #ff7a55;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  .stars span {
+    opacity: 0.3;
+  }
+  .peek-review {
+    margin-top: 6px !important;
+    font-size: 0.74rem;
+    line-height: 1.35;
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .caption {
+    margin: 8px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    color: var(--muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 36px;
+  }
+  .pager button {
+    font: inherit;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--navy);
+    cursor: pointer;
+  }
+  .pager button:hover:not(:disabled) {
+    border-color: var(--orange);
+    color: var(--orange-ink);
+  }
+  .pager button:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+  .pageinfo {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    min-width: 4ch;
+    text-align: center;
+  }
+
+  @media (max-width: 860px) {
+    .shelf { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .shelf { grid-template-columns: repeat(3, 1fr); gap: 18px 12px; }
+  }
+</style>

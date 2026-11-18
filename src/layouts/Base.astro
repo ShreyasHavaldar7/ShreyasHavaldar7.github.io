@@ -1,0 +1,256 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { site, tabs, socials } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description = site.description } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : site.name;
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => (href === '/' ? path === '/' : path === href || path.startsWith(href + '/'));
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/img/portrait.jpg', Astro.site)} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0f1c" media="(prefers-color-scheme: dark)" />
+    <script is:inline>
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gtag}`}></script>
+    <script is:inline define:vars={{ id: site.gtag }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', id);
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="/">
+          <span class="wm-name">Shreyas Havaldar</span><span class="wm-dot" aria-hidden="true">.</span>
+        </a>
+        <nav class="tabs" aria-label="Main">
+          {tabs.map((t) => (
+            <a href={t.href} class:list={['tab', { active: isActive(t.href) }]} aria-current={isActive(t.href) ? 'page' : undefined}>
+              {t.label}
+            </a>
+          ))}
+          <a href={site.resume} class="tab" target="_blank" rel="noopener">
+            CV<Icon name="arrow" size={13} />
+          </a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="i-sun"><Icon name="sun" /></span>
+          <span class="i-moon"><Icon name="moon" /></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span class="muted">© {new Date().getFullYear()} {site.name}</span>
+        <div class="footer-links">
+          {socials.map((s) => (
+            <a href={s.href} aria-label={s.label} title={s.label} target={s.href.startsWith('/') ? undefined : '_blank'} rel="noopener">
+              <Icon name={s.icon} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector('.theme-toggle');
+      btn?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const current = root.dataset.theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const next = current === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('theme', next); } catch {}
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 64px;
+  }
+  .wordmark {
+    font-weight: 750;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .wm-dot {
+    color: var(--orange);
+  }
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+  }
+  .tab {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 8px 12px;
+    color: var(--muted);
+    font-weight: 550;
+    font-size: 0.98rem;
+    text-decoration: none;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+  }
+  .tab:hover {
+    color: var(--navy);
+    background: var(--accent-soft);
+  }
+  .tab.active {
+    color: var(--navy);
+  }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -13px;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background: var(--orange);
+  }
+  .theme-toggle {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .theme-toggle:hover {
+    color: var(--orange);
+  }
+  .i-moon { display: none; }
+  :global(:root[data-theme='dark']) .i-sun { display: none; }
+  :global(:root[data-theme='dark']) .i-moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .i-sun { display: none; }
+    :global(:root:not([data-theme='light'])) .i-moon { display: block; }
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--line);
+    font-size: 0.92rem;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 6px;
+  }
+  .footer-links a {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: var(--muted);
+  }
+  .footer-links a:hover {
+    color: var(--orange);
+    background: var(--tag-bg);
+  }
+
+  /* Phones: name + toggle on one row, tabs on a scrollable row below. */
+  @media (max-width: 760px) {
+    .header-inner {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 0;
+      padding-top: 12px;
+    }
+    .theme-toggle {
+      margin-left: auto;
+    }
+    .tabs {
+      order: 3;
+      width: 100%;
+      margin: 6px -8px 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tabs {
+      gap: 0;
+    }
+    .tab {
+      padding: 8px 7px 12px;
+      font-size: 0.92rem;
+    }
+    .tab :global(svg) {
+      display: none;
+    }
+    .tab.active::after {
+      left: 7px;
+      right: 7px;
+      bottom: 0;
+    }
+    .footer-inner {
+      flex-direction: column-reverse;
+    }
+  }
+</style>

@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import { publications, type PubKind } from '../data/publications';
+
+const me = /Havaldar, S\.\*?/;
+const fmtAuthors = (a: string) => a.replace(me, (m) => `<strong class="me">${m}</strong>`);
+const years = [...new Set(publications.map((p) => p.year))];
+const filters: ('All' | PubKind)[] = ['All', 'Conference', 'Workshop', 'Preprint'];
+---
+<Base title="Publications" description="Publications by Shreyas Havaldar on causal reasoning, fairness, privacy and learning from aggregate data.">
+  <h1 class="page-title">Publications</h1>
+  <p class="page-lede">
+    * denotes equal contribution. Also on
+    <a href="https://scholar.google.com/citations?user=kLk_Ep0AAAAJ&hl=en">Google Scholar</a>.
+  </p>
+
+  <div class="filters" role="group" aria-label="Filter publications">
+    {filters.map((f, i) => (
+      <button type="button" class:list={['filter', { on: i === 0 }]} data-filter={f} aria-pressed={i === 0 ? 'true' : 'false'}>
+        {f}
+      </button>
+    ))}
+  </div>
+
+  {years.map((y) => (
+    <section class="year" data-year>
+      <h2 class="section-title">{y}</h2>
+      <ol class="pubs">
+        {publications.filter((p) => p.year === y).map((p) => (
+          <li class="pub" data-kinds={p.kinds.join(' ')}>
+            <div class="ids">{p.ids.map((id) => <span class="id">{id}</span>)}</div>
+            <div class="body">
+              <h3 class="title">{p.title}</h3>
+              <p class="authors" set:html={fmtAuthors(p.authors)} />
+              <p class="venue">
+                {p.highlight && <span class="badge">{p.highlight}</span>}
+                <span set:html={p.venue} />
+              </p>
+              <div class="plinks">
+                {p.links.map((l) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
+                {p.note && <span class="soon">{p.note}</span>}
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter');
+  buttons.forEach((b) =>
+    b.addEventListener('click', () => {
+      const f = b.dataset.filter!;
+      buttons.forEach((x) => {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      document.querySelectorAll<HTMLElement>('.pub').forEach((li) => {
+        li.hidden = f !== 'All' && !li.dataset.kinds!.split(' ').includes(f);
+      });
+      document.querySelectorAll<HTMLElement>('[data-year]').forEach((s) => {
+        s.hidden = !s.querySelector('.pub:not([hidden])');
+      });
+    }),
+  );
+</script>
+
+<style>
+  .filters {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 36px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .filter {
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .filter:hover {
+    color: var(--navy);
+  }
+  .filter.on {
+    background: var(--navy);
+    color: var(--bg);
+  }
+  .year {
+    margin-bottom: 36px;
+  }
+  .pubs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pub {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pub:last-child {
+    border-bottom: 0;
+  }
+  .ids {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .id {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--navy);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 1px 7px;
+    font-variant-numeric: tabular-nums;
+  }
+  .title {
+    margin: 0 0 4px;
+    font-size: 1.08rem;
+    line-height: 1.35;
+    font-weight: 650;
+    color: var(--text);
+  }
+  .authors,
+  .venue {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .authors :global(.me) {
+    color: var(--text);
+  }
+  .venue :global(a) {
+    color: inherit;
+  }
+  .badge {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--orange-ink);
+    background: var(--tag-bg);
+    border-radius: 999px;
+    vertical-align: 1px;
+  }
+  .plinks {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .plinks a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .soon {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border: 1px dashed var(--line);
+    border-radius: 6px;
+    color: var(--muted);
+  }
+  .plinks a:hover {
+    border-color: var(--orange);
+    color: var(--orange-ink);
+  }
+  @media (max-width: 640px) {
+    .pub {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+    .ids {
+      flex-direction: row;
+    }
+  }
+</style>

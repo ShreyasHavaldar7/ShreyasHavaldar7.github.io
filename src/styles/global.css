@@ -1,0 +1,160 @@
+@import '@fontsource-variable/source-sans-3';
+@import '@fontsource-variable/source-serif-4';
+
+/* Palette taken from the résumé: navy #000080 and orange #FF6138. */
+:root {
+  --navy: #000080;
+  --orange: #ff6138;
+  --orange-ink: #d9431c; /* orange dark enough for small text on light bg */
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #2a2a33;
+  --muted: #5d5d66;
+  --line: #e7e4dd;
+  --accent: var(--navy);
+  --accent-soft: rgba(0, 0, 128, 0.06);
+  --tag-bg: rgba(255, 97, 56, 0.1);
+  --shadow: 0 1px 2px rgba(20, 20, 60, 0.05), 0 8px 24px rgba(20, 20, 60, 0.06);
+
+  --sans: 'Source Sans 3 Variable', system-ui, -apple-system, sans-serif;
+  --serif: 'Source Serif 4 Variable', Georgia, serif;
+  --max: 920px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --navy: #a9b6ff;
+    --orange: #ff7a55;
+    --orange-ink: #ff8a68;
+    --bg: #0d0f1c;
+    --surface: #151829;
+    --text: #e6e7ef;
+    --muted: #a2a5b9;
+    --line: #262a40;
+    --accent-soft: rgba(169, 182, 255, 0.08);
+    --tag-bg: rgba(255, 122, 85, 0.14);
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --navy: #a9b6ff;
+  --orange: #ff7a55;
+  --orange-ink: #ff8a68;
+  --bg: #0d0f1c;
+  --surface: #151829;
+  --text: #e6e7ef;
+  --muted: #a2a5b9;
+  --line: #262a40;
+  --accent-soft: rgba(169, 182, 255, 0.08);
+  --tag-bg: rgba(255, 122, 85, 0.14);
+  --shadow: none;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--navy) 30%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s, color 0.15s;
+}
+a:hover {
+  text-decoration-color: var(--orange);
+}
+
+strong {
+  font-weight: 650;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+main {
+  flex: 1;
+  padding: 48px 0 72px;
+}
+
+/* Section headings echo the résumé: orange title with a rule. */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.page-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  font-weight: 750;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.page-lede {
+  color: var(--muted);
+  margin: 0 0 36px;
+  max-width: 62ch;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  main {
+    padding: 28px 0 56px;
+  }
+}

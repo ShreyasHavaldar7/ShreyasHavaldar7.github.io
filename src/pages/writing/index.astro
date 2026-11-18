@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+---
+<Base title="Writing" description="Occasional posts and musings by Shreyas Havaldar.">
+  <h1 class="page-title">Writing</h1>
+  <p class="page-lede">Random musings, mostly about books, sport and research.</p>
+
+  <ul class="posts">
+    {posts.map((p) => (
+      <li>
+        <a href={`/writing/${p.id}`}>
+          <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+          <span class="t">{p.data.title}</span>
+          {p.data.description && <span class="d">{p.data.description}</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 70ch;
+  }
+  .posts a {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    column-gap: 20px;
+    padding: 18px 12px;
+    margin: 0 -12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .posts a:hover {
+    background: var(--accent-soft);
+  }
+  time {
+    grid-row: span 2;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted);
+    padding-top: 3px;
+  }
+  .t {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .posts a:hover .t {
+    color: var(--orange-ink);
+  }
+  .d {
+    color: var(--muted);
+    font-size: 0.97rem;
+  }
+  @media (max-width: 560px) {
+    .posts a {
+      grid-template-columns: 1fr;
+    }
+    time {
+      grid-row: auto;
+    }
+  }
+</style>
