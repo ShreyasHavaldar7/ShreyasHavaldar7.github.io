@@ -35,7 +35,6 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
       </p>
       <figure class="quote">
         <blockquote>Somewhere, something incredible is waiting to be known.</blockquote>
-        <figcaption>Carl Sagan</figcaption>
       </figure>
     </div>
     <div class="meta">
@@ -210,16 +209,6 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
     line-height: 1.5;
     color: var(--navy);
     text-wrap: balance;
-  }
-  .quote figcaption {
-    margin-top: 2px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--muted);
-  }
-  .quote figcaption::before {
-    content: '— ';
   }
   .icon-link {
     display: grid;
