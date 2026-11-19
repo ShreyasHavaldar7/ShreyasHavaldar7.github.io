@@ -24,4 +24,5 @@ export const socials = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shreyas-havaldar-71377b182', icon: 'linkedin' },
   { label: 'X / Twitter', href: 'https://x.com/_toolazyto_', icon: 'x' },
   { label: 'Goodreads', href: 'https://www.goodreads.com/user/show/118954168-shreyas-havaldar', icon: 'goodreads' },
+  { label: 'Beli', href: 'https://beliapp.co/app/shre7', icon: 'beli' },
 ] as const;
