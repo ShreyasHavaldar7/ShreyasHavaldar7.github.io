@@ -99,6 +99,14 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
 </Base>
 
 <style>
+  /* Noto Sans Devanagari (OFL), subset to just the glyphs in the Marathi name (~5 KB). */
+  @font-face {
+    font-family: 'Name Devanagari';
+    src: url('/fonts/name-devanagari.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0900-097F, U+200C-200D, U+25CC;
+  }
   .hero {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -155,7 +163,7 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
     white-space: nowrap;
   }
   .native [lang='mr'] {
-    font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', var(--sans);
+    font-family: 'Name Devanagari', 'Noto Sans Devanagari', var(--sans);
     color: var(--navy);
   }
   .pron {
