@@ -15,7 +15,10 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
     <img class="portrait" src="/img/portrait.jpg" alt="Portrait of Shreyas Havaldar" width="280" height="280" />
     <div class="intro">
       <p class="eyebrow">{site.role}</p>
-      <h1>Shreyas Havaldar</h1>
+      <h1>
+        Shreyas Havaldar
+        <span class="native">(<span lang="mr">श्रेयस हवालदार</span>, <span class="pron" title="Pronunciation">SHRAY-yus huh-VAAL-daar</span>)</span>
+      </h1>
       <p class="bio">
         I’m a third-year PhD student supported by the <strong>Presidential Fellowship</strong>, working with
         <a href="https://causalai.net/">Prof. Elias Bareinboim</a> in the Causal Artificial Intelligence Lab at
@@ -137,6 +140,27 @@ const selected = publications.filter((p) => p.ids.some((id) => selectedIds.inclu
     font-weight: 750;
     letter-spacing: -0.025em;
     color: var(--navy);
+  }
+  .native {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--muted);
+  }
+  .native [lang='mr'],
+  .pron {
+    white-space: nowrap;
+  }
+  .native [lang='mr'] {
+    font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', var(--sans);
+    color: var(--navy);
+  }
+  .pron {
+    font-style: italic;
+    letter-spacing: 0.02em;
   }
   .bio {
     margin: 0;
