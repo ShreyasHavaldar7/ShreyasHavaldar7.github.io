@@ -84,7 +84,9 @@ const service = [
 
   <section id="bio" role="tabpanel" aria-labelledby="tab-bio" class="panel prose">
     <p>
-      Shreyas Havaldar is a third-year PhD student in
+      Shreyas Havaldar
+      <span class="native">(<span lang="mr">श्रेयस हवालदार</span>, <span class="pron" title="Pronunciation">SHRAY-yus huh-VAAL-daar</span>)</span>
+      is a third-year PhD student in
       <a href="https://causalai.net/">Prof. Elias Bareinboim</a>’s Causal Artificial Intelligence Lab at Columbia
       University, supported by the <strong>Presidential Fellowship</strong>. Shreyas aspires to build an impactful
       research career in <strong>trustworthy machine learning</strong>, creating systems that are accountable,
@@ -185,6 +187,22 @@ const service = [
 </script>
 
 <style>
+  .native {
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+  .native [lang='mr'],
+  .pron {
+    white-space: nowrap;
+  }
+  .native [lang='mr'] {
+    font-family: 'Kohinoor Devanagari', 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', var(--sans);
+    color: var(--navy);
+  }
+  .pron {
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
   .seg {
     display: inline-flex;
     flex-wrap: wrap;
